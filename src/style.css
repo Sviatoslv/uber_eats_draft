@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  color: 1d1d1d;
+  color: #1d1d1d;
   background-color: #fff;
 
   font-family: 'Roboto', sans-serif;
@@ -72,6 +72,7 @@ body {
   border: 1px solid #e0e0e0;
   border-radius: 2px;
 
+  color: #626262;
   font: inherit;
   background: url(images/location.svg) 12px center no-repeat;
 }
@@ -111,5 +112,90 @@ body {
   width: 40px;
   height: 72px;
   background: url(images/basket.svg) center no-repeat;
+}
+
+/* Main*/
+
+.main--wrapper {
+  max-width: 956px;
+  margin: 0 auto;
+}
+
+[name="search"] {
+  box-sizing: border-box;
+  line-height: 24px;
+  width: 100%;
+  height: 40px;
+  margin-top: 32px;
+  margin-bottom: 56px;
+  padding: 8px 0 15px 30px;
+  border: none;
+  border-bottom: 1px solid rgba(117, 117, 117, 0.3);
+
+  color: rgba(98, 98, 98, 0.5);
+  font: inherit;
+  background: url(images/search.svg) 0 4px no-repeat;
+}
+
+.restaurants-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.restaurants h1 {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 34px;
+  color: #1d1d1d;
+}
+
+.restaurant {
+  width: 308px;
+  padding-bottom: 20px;
+  margin-bottom: 16px;
+}
+
+.restaurant img {
+  width: 308px;
+  height: 256px;
+  margin-bottom: 16px;
+}
+
+.restaurant h2 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.restaurant_tags {
+  padding: 0 0px;
+  display: flex;
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.restaurant-info  {
+  position: relative;
+  font-size: 14px;
+  line-height: 21px;
+  color: #626262;
+  padding-right: 12px;
+}
+
+.restaurant-info:not(:first-child)::after {
+  position: absolute;
+  content: '•';
+  color: #626262;
+  top: 2px;
+  left: -8px;
+}
+
+.restaurant_time {
+  font-size: 13px;
+  line-height: 21px;
+  margin: 0;
 }
 
