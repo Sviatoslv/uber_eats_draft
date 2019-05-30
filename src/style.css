@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: 1d1d1d;
+  background-color: #fff;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.visually-hidden { /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.header {
+  background-color: #fff;
+  min-height: 72px;
+  box-shadow: 0 0 16px rgba(38, 38, 38, 0.16);
+}
+
+.header-wrapper {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 956px;
+}
+
+.header_logo {
+  width: 150px;
+}
+
+.header_logo img {
+  width: 100%;
+}
+
+.header_address {
+  display: flex;
+  align-items: center;
+}
+
+.header_delivery-type {
+  display: block;
+  box-sizing: border-box;
+  width: 65px;
+  height: 40px;
+  padding: 8px 12px;
+  margin-right: 9px;
+
+  line-height: 24px;
+  text-transform: uppercase;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+}
+
+.header-direction {
+  color: #626262;
+  margin-right: 9px;
+}
+
+.header_adress-field {
+  box-sizing: border-box;
+  line-height: 24px;
+  width: 292px;
+  height: 40px;
+  padding: 8px 0 8px 36px;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+
+  font: inherit;
+  background: url(images/location.svg) 12px center no-repeat;
+}
+
+.header_buttons-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 232px;
+}
+
+.button {
+  display: block;
+  width: 80px;
+  height: 40px;
+  padding: 8px;
+  box-sizing: border-box;
+  color: #1d1d1d;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+
+  line-height: 24px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+}
+
+.header-register {
+  color: white;
+  background-color: #262626;
+  border: 1px solid #262626;
+}
+
+.header-cart {
+  display: block;
+  width: 40px;
+  height: 72px;
+  background: url(images/basket.svg) center no-repeat;
+}
+
