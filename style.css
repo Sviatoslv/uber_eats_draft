@@ -631,6 +631,10 @@ body {
   }
 }
 @media (max-width: 639px) {
+  .footer__information {
+    display: grid;
+    grid-column-gap: 30px;
+  }
   .footer__site-language select {
     width: 100%;
   }

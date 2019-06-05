@@ -219,10 +219,10 @@ $footer-background-color: #262626;
   }
 
   @media (max-width: 639px) {
-    // &__information {
-    //   display: grid;
-    //   grid-template-columns: repeat(3, minmax(auto, 308px));
-    // }
+    &__information {
+      display: grid;
+      grid-column-gap: 30px;
+    }
 
     &__site-language select {
       width: 100%;
