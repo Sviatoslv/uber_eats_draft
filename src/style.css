@@ -271,6 +271,9 @@ body {
   }
 }
 
+.food-search {
+  position: relative;
+}
 .food-search [name=search] {
   box-sizing: border-box;
   line-height: 24px;
@@ -285,6 +288,9 @@ body {
   color: #62626280;
   font: inherit;
   background: url(images/search.svg) left 0 bottom 12px no-repeat;
+}
+.food-search [name=search]:focus + .button--food-search {
+  display: flex;
 }
 .food-search [name=search]::placeholder {
   color: #b0b0b0;
@@ -306,13 +312,6 @@ body {
     background: url(images/search.svg) 0 16px no-repeat;
     background-size: 16px;
   }
-}
-
-.food-search {
-  position: relative;
-}
-.food-search [name=search]:focus + .button--food-search {
-  display: flex;
 }
 @media (max-width: 479px) {
   .food-search [name=search]:focus + .button--food-search {
