@@ -95,13 +95,13 @@ $button-background-color: #262626;
     & {
       display: flex;
       justify-content: stretch;
-      align-items: center;
+      align-items: stretch;
     }
     
     &__wrapper {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: stretch;
       padding: 0 4px 0 8px;
     }
 
@@ -113,13 +113,6 @@ $button-background-color: #262626;
       display: none;
     }
 
-    & .button {
-      width: 72px;
-      font-size: 11px;
-    }
-  }
-
-  @media (max-width: 359px) {
     &__buttons-wrapper  {
       max-width: 156px;
     }
@@ -128,7 +121,9 @@ $button-background-color: #262626;
       width: 72px;
       font-size: 11px;
     }
+  }
 
+  @media (max-width: 359px) {
     &__cart {
       display: none;
     }
