@@ -106,12 +106,12 @@ body {
   .header {
     display: flex;
     justify-content: stretch;
-    align-items: center;
+    align-items: stretch;
   }
   .header__wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     padding: 0 4px 0 8px;
   }
   .header__logo img {
@@ -120,12 +120,6 @@ body {
   .header__address {
     display: none;
   }
-  .header .button {
-    width: 72px;
-    font-size: 11px;
-  }
-}
-@media (max-width: 359px) {
   .header__buttons-wrapper {
     max-width: 156px;
   }
@@ -133,6 +127,8 @@ body {
     width: 72px;
     font-size: 11px;
   }
+}
+@media (max-width: 359px) {
   .header__cart {
     display: none;
   }
