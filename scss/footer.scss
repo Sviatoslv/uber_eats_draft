@@ -25,7 +25,7 @@ $footer-background-color: #262626;
   
   &__information {
     display: grid;
-    grid-template-columns: repeat(3, minmax(auto, 308px));
+    grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 16px;
     grid-template-rows: auto;
     padding: 32px 0 25px;
@@ -219,10 +219,10 @@ $footer-background-color: #262626;
   }
 
   @media (max-width: 639px) {
-    &__information {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(auto, 308px));
-    }
+    // &__information {
+    //   display: grid;
+    //   grid-template-columns: repeat(3, minmax(auto, 308px));
+    // }
 
     &__site-language select {
       width: 100%;
@@ -241,7 +241,7 @@ $footer-background-color: #262626;
   @media (max-width: 479px) {
     &__information {
       display: grid;
-      grid-template-columns: minmax(auto, 308px);
+      grid-template-columns: 1fr;
     }
 
     &__legal-list {
