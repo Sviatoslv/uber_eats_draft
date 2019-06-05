@@ -1,0 +1,35 @@
+.restaurants {
+  & h1 {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 34px;
+    color: $text-color;
+
+    margin: 0;
+    margin-bottom: 16px;
+    padding: 0;
+  }
+  
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(256px, 308px));
+    grid-row-gap: 16px;
+    grid-column-gap: 16px;
+    grid-auto-flow: row;
+    justify-content: stretch;
+  }
+
+  @media (max-width: 930px) {
+    &__wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(240px, 1fr));
+    }
+  }
+
+  @media (max-width: 520px) {
+    &__wrapper {
+      display: grid;
+      grid-template-columns: repeat(1, minmax(240px, 1fr));
+    }
+  }
+}

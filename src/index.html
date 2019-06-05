@@ -5,27 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Uber Eats</title>
+  <link rel="shortcut icon" type="image/ico" href="images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap&subset=cyrillic-ext" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="header-wrapper">
-      <div class="header_logo">
+  <header class="header" id="home">
+    <div class="header__wrapper">
+      <div class="header__logo">
         <a href="#">
-          <img src="images/logo.svg" alt="Uber eats logotype">
+          <img src="images/logo.svg" alt="UBER EATS logotype">
         </a>
       </div>
 
-      <form class="header_address" action="">
-        <label for="delivery-address-id" class="header_delivery-type">
-          ASAP
+      <form class="delivery" action="" method="">
+        <label for="devlivery-time-id" class="visually-hidden">
+          When
+        </label>
+        <!-- <select
+          id="delivery-time-id"
+          name="delivery-time"
+          class="delivery__time"
+        >
+          <option value="">ASAP</option>
+          <option value="">WSAP</option>
+        </select> -->
+        <div class="delivery__time-dropdown">
+          <button class="delivery__time-dropdown-button">ASAP</button>
+          
+          <div class="delivery__time-dropdown-content">
+            <p>ASAP</p>
+            <p>Your time</p>
+          </div>
+        </div>
+
+        <label
+          for="delivery-address-id"
+          class="delivery__address-label"
+        >
+          to
         </label>
 
-        <span class="header-direction">to</span>
-
         <input
-          class="header_adress-field"
+          class="delivery__address"
           type="text"
           name="delivery-address"
           id="delivery-address-id"
@@ -33,129 +55,318 @@
         >
       </form>
 
-      <div class="header_buttons-wrapper">
-        <a href="#" class="button header-sign-in">Sign In</a>
-        <a href="#" class="button header-register">Register</a>
-        <a href="#" class="header-cart"><span class="visually-hidden">Корзина</span></a>
+      <div class="header__buttons-wrapper">
+        <a href="#" class="button button--header-sign-in">Sign In</a>
+        <a href="#" class="button button--header-register">Register</a>
       </div>
+      <a href="#" class="header__cart">
+        <img src="images/basket.svg" alt="Корзина">
+      </a>
     </div>
   </header>
 
   <main class="main">
-    <div class="main--wrapper">
-      <form class="food-search" action="">
+    <div class="main__wrapper">
+      <form class="food-search" action="" method="">
         <input
           type="search"
           name="search"
           id="search-field"
           placeholder="Search for restaurant or cuisine"
         >
+
+        <button type="submit" class="button button--food-search">Search</button>
+      </form>
+
+      <form class="delivery delivery--main" action="" method="">
+          <label for="devlivery-time-id" class="devlivery__time-label">
+            When
+          </label>
+          <!-- <select
+            id="delivery-time-id"
+            name="delivery-time"
+            class="delivery__time"
+          >
+            <option value="">ASAP</option>
+            <option value="">WSAP</option>
+          </select> -->
+          <div class="delivery__time-dropdown">
+            <button class="delivery__time-dropdown-button">ASAP</button>
+            
+            <div class="delivery__time-dropdown-content">
+              <p>ASAP</p>
+              <p>Your time</p>
+            </div>
+          </div>
+  
+          <label
+            for="delivery-address-id"
+            class="delivery__address-label"
+          >
+            To
+          </label>
+  
+          <input
+            class="delivery__address"
+            type="text"
+            name="delivery-address"
+            id="delivery-address-id"
+            placeholder="ul. Tarasivska St, 16"
+          >
       </form>
 
     <article class="restaurants">
       <h1>Kyiv Restaurants</h1>
       
-      <div class="restaurants-wrapper">
+      <div class="restaurants__wrapper">
         <section class="restaurant">
-          <img src="images/mack.jpg" alt="mackdonalds_photo" class="restaurant_preview">
-          <h2 class="restaurant_title">Макдоналдс</h2>
+          <div class="restaurant__preview restaurant__preview--mack"></div>
+          <h2 class="restaurant__title">Макдоналдс</h2>
 
-          <p class="restaurant_tags">
-            <span class="restaurant-info restaurant_price">₴₴</span>
-            <span class="restaurant-info restaurant_cuisine-kind">Бургеры</span>
+          <p class="restaurant__tags">
+            <span class="restaurant-info restaurant__price">₴₴</span>
+            <span class="restaurant-info restaurant__cuisine-kind">Бургеры</span>
           </p>
 
-          <p class="restaurant_time">25-35 Min</p>
+          <p class="restaurant__cooking-time">25-35 Min</p>
         </section>
 
         <section class="restaurant">
-            <img src="images/mack.jpg" alt="mackdonalds_photo" class="restaurant_preview">
-            <h2 class="restaurant_title">Макдоналдс</h2>
-    
-            <p class="restaurant_tags">
-              <span class="restaurant-info restaurant_price">₴₴</span>
-              <span class="restaurant-info restaurant_cuisine-kind">Бургеры</span>
-            </p>
-    
-            <p class="restaurant_time">25-35 Min</p>
+          <div class="restaurant__preview restaurant__preview--wokwei"></div>
+          <h2 class="restaurant__title">WOKWEI</h2>
+
+          <p class="restaurant__tags">
+            <span class="restaurant-info restaurant__price">₴₴</span>
+            <span class="restaurant-info restaurant__cuisine-kind">Китайська</span>
+            <span class="restaurant-info restaurant__cuisine-kind">Азіатська</span>
+          </p>
+
+          <p class="restaurant__cooking-time">40-50 Min</p>
         </section>
 
         <section class="restaurant">
-            <img src="images/mack.jpg" alt="mackdonalds_photo" class="restaurant_preview">
-            <h2 class="restaurant_title">Макдоналдс</h2>
-    
-            <p class="restaurant_tags">
-              <span class="restaurant-info restaurant_price">₴₴</span>
-              <span class="restaurant-info restaurant_cuisine-kind">Бургеры</span>
-            </p>
-    
-            <p class="restaurant_time">25-35 Min</p>
+          <div class="restaurant__preview restaurant__preview--yizha"></div>
+          <h2 class="restaurant__title">YIZHA</h2>
+
+          <p class="restaurant__tags">
+            <span class="restaurant-info restaurant__price">₴₴</span>
+            <span class="restaurant-info restaurant__cuisine-kind">Американська</span>
+            <span class="restaurant-info restaurant__cuisine-kind">Бургери</span>
+            <span class="restaurant-info restaurant__cuisine-kind">Вулична</span>
+          </p>
+
+          <p class="restaurant__cooking-time">35-45 Min</p>
         </section>
 
         <section class="restaurant">
-            <img src="images/mack.jpg" alt="mackdonalds_photo" class="restaurant_preview">
-            <h2 class="restaurant_title">Макдоналдс</h2>
-    
-            <p class="restaurant_tags">
-              <span class="restaurant-info restaurant_price">₴₴</span>
-              <span class="restaurant-info restaurant_cuisine-kind">Бургеры</span>
-            </p>
-    
-            <p class="restaurant_time">25-35 Min</p>
+          <div class="restaurant__preview restaurant__preview--musafir"></div>
+          <h2 class="restaurant__title">Musafir (вул. Саксаганського)</h2>
+
+          <p class="restaurant__tags">
+            <span class="restaurant-info restaurant__price">₴₴</span>
+            <span class="restaurant-info restaurant__cuisine-kind">Близькосхідна</span>
+          </p>
+
+          <p class="restaurant__cooking-time">25-35 Min</p>
         </section>
 
         <section class="restaurant">
-            <img src="images/mack.jpg" alt="mackdonalds_photo" class="restaurant_preview">
-            <h2 class="restaurant_title">Макдоналдс</h2>
-    
-            <p class="restaurant_tags">
-              <span class="restaurant-info restaurant_price">₴₴</span>
-              <span class="restaurant-info restaurant_cuisine-kind">Бургеры</span>
-            </p>
-    
-            <p class="restaurant_time">25-35 Min</p>
+          <div class="restaurant__preview restaurant__preview--wok"></div>
+          <h2 class="restaurant__title">WOKWEI</h2>
+
+          <p class="restaurant__tags">
+            <span class="restaurant-info restaurant__price">₴</span>
+            <span class="restaurant-info restaurant__cuisine-kind">Китайська</span>
+            <span class="restaurant-info restaurant__cuisine-kind">Азіатська</span>
+          </p>
+
+          <p class="restaurant__cooking-time">15-25 Min</p>
         </section>
 
         <section class="restaurant">
-            <img src="images/mack.jpg" alt="mackdonalds_photo" class="restaurant_preview">
-            <h2 class="restaurant_title">Макдоналдс</h2>
-    
-            <p class="restaurant_tags">
-              <span class="restaurant-info restaurant_price">₴₴</span>
-              <span class="restaurant-info restaurant_cuisine-kind">Бургеры</span>
-            </p>
-    
-            <p class="restaurant_time">25-35 Min</p>
+          <div class="restaurant__preview restaurant__preview--milk-bar"></div>
+          <h2 class="restaurant__title">Milk Bar</h2>
+
+          <p class="restaurant__tags">
+            <span class="restaurant-info restaurant__price">₴₴</span>
+            <span class="restaurant-info restaurant__cuisine-kind">Десерти</span>
+            <span class="restaurant-info restaurant__cuisine-kind">Європейська</span>
+          </p>
+
+          <p class="restaurant__cooking-time">25-35 Min</p>
         </section>
 
         <section class="restaurant">
-            <img src="images/mack.jpg" alt="mackdonalds_photo" class="restaurant_preview">
-            <h2 class="restaurant_title">Макдоналдс</h2>
-    
-            <p class="restaurant_tags">
-              <span class="restaurant-info restaurant_price">₴₴</span>
-              <span class="restaurant-info restaurant_cuisine-kind">Бургеры</span>
-            </p>
-    
-            <p class="restaurant_time">25-35 Min</p>
+          <div class="restaurant__preview restaurant__preview--pizza"></div>
+          <h2 class="restaurant__title">Mimosa Brooklyn Pizza</h2>
+
+          <p class="restaurant__tags">
+            <span class="restaurant-info restaurant__price">₴₴</span>
+            <span class="restaurant-info restaurant__cuisine-kind">Італійська</span>
+            <span class="restaurant-info restaurant__cuisine-kind">Піца</span>
+            <span class="restaurant-info restaurant__cuisine-kind">Американська</span>
+          </p>
+
+          <p class="restaurant__cooking-time">15-25 Min</p>
         </section>
 
         <section class="restaurant">
-            <img src="images/mack.jpg" alt="mackdonalds_photo" class="restaurant_preview">
-            <h2 class="restaurant_title">Макдоналдс</h2>
-    
-            <p class="restaurant_tags">
-              <span class="restaurant-info restaurant_price">₴₴</span>
-              <span class="restaurant-info restaurant_cuisine-kind">Бургеры</span>
-            </p>
-    
-            <p class="restaurant_time">25-35 Min</p>
+          <div class="restaurant__preview restaurant__preview--tobe"></div>
+          <h2 class="restaurant__title">To Be</h2>
+
+          <p class="restaurant__tags">
+            <span class="restaurant-info restaurant__price">₴₴</span>
+            <span class="restaurant-info restaurant__cuisine-kind">Італійська</span>
+            <span class="restaurant-info restaurant__cuisine-kind">Піца</span>
+            <span class="restaurant-info restaurant__cuisine-kind">Американська</span>
+          </p>
+
+          <p class="restaurant__cooking-time">30-40 Min</p>
         </section>
-    </div>
+
+        <section class="restaurant">
+          <div class="restaurant__preview restaurant__preview--druzi"></div>
+          <h2 class="restaurant__title">Druzi Cafe (вул. Прорізна)</h2>
+
+          <p class="restaurant__tags">
+            <span class="restaurant-info restaurant__price">₴₴</span>
+            <span class="restaurant-info restaurant__cuisine-kind">Американська</span>
+            <span class="restaurant-info restaurant__cuisine-kind">Сучасна європейська</span>
+            <span class="restaurant-info restaurant__cuisine-kind">Італійська</span>
+          </p>
+
+          <p class="restaurant__cooking-time">25-35 Min</p>
+        </section>
+      </div>
     </article>
   </div>
   </main>
 
-  <footer class="footer"></footer>
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <div class="footer__logo">
+        <img src="./images/white-logo.svg" alt="UBER EATS logotype">
+      </div>
+
+      <div class="footer__information">
+        <div class="footer__language-social-wrapper">
+          <form class="footer__site-language" action="" method="">
+            <select
+              name="site-language"
+              id="site-language__select"
+              aria-label="site language"
+            >
+              <option value="eng">
+                <a href="#" class="footer__site-language-link">English</a>
+              </option>
+
+              <option value="ukr">
+                <a href="#" class="footer__site-language-link">Ukranian</a>
+              </option>
+
+              <option value="ru">
+                <a href="#" class="footer__site-language-link">Rusian</a>
+              </option>
+            </select>
+          </form>
+
+          <div class="footer__social">
+            <p class="footer__tag"><span class="footer__hash-tag">#</span>UberEats</p>
+            <ul class="footer__social-list">
+              <li>
+                <a href="#" class="footer__social-link footer__social-link--facebook">
+                  <span class="visually-hidden">Facebook</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="footer__social-link footer__social-link--twitter">
+                  <span class="visually-hidden">Facebook</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="footer__social-link footer__social-link--instagram">
+                  <span class="visually-hidden">Facebook</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <nav class="footer__navigation">
+          <ul class="footer__navigation-list">
+            <li class="footer__navigation-item">
+              <a href="#">About UberEats</a>
+            </li>     
+
+            <li class="footer__navigation-item">
+              <a href="#">Become a Delivery Partner</a>
+            </li>     
+
+            <li class="footer__navigation-item">
+              <a href="#">Become a Restaurant Partner</a>
+            </li>     
+          </ul>
+        </nav>
+
+        <nav class="footer__navigation">
+          <ul class="footer__navigation-list">
+            <li class="footer__navigation-item">
+              <a href="#">See all cities</a>
+            </li>     
+
+            <li class="footer__navigation-item">
+              <a href="#">Pricing</a>
+            </li>     
+
+            <li class="footer__navigation-item">
+              <a href="#">Help</a>
+            </li>
+            
+            <li class="footer__navigation-item">
+              <a href="#">FAQs</a>
+            </li>  
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer__app-list-wrapper">
+        <ul class="footer__app-list">
+          <li class="footer__app-list-item">
+            <a href="#">
+              <img src="./images/appstore.svg" alt="link to appstore">
+            </a>
+          </li>
+
+          <li class="footer__app-list-item">
+            <a href="#">
+              <img src="./images/google_play.svg" alt="link to google play">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__legal">
+        <ul class="footer__legal-list">
+          <li class="footer__legal-link">
+            <a>© 2019 Uber Technologies Inc.</a>
+          </li>
+
+          <li class="footer__legal-link footer__legal-link--">
+            <a href="#">Privacy</a>
+          </li>
+
+          <li class="footer__legal-link">
+            <a href="#">Terms</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <a href="#home" class="footer__to-top footer__to-top-animation">
+      <span class="visually-hidden">Наверх</span>
+    </a>
+  </footer>
 </body>
 </html>
