@@ -88,6 +88,10 @@
     cursor: pointer;
   }
 
+  &-info:hover {
+    color: #57ad57;
+  }
+
   &-info:first-child {
     padding-left: 0;
   }
@@ -110,6 +114,10 @@
     line-height: 21px;
     margin: 0;
     cursor: pointer;
+  }
+
+  &__cooking-time:hover {
+    color: #57ad57;
   }
 
   @media (max-width: 1023px) {

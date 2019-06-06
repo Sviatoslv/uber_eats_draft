@@ -1,4 +1,5 @@
 $border-color: #e0e0e0;
+$text-color: #1d1d1d;
 
 .delivery {  
     flex-grow: 1;
@@ -55,6 +56,11 @@ $border-color: #e0e0e0;
     display: block;
   }
 
+  &__time-dropdown-content a {
+    text-decoration: none;
+    color: $text-color;
+  }
+
   &__time-dropdown-content p {
     margin: 0;
     padding: 12px;
@@ -74,7 +80,7 @@ $border-color: #e0e0e0;
     line-height: 24px;
     width: 292px;
     height: 40px;
-    padding: 8px 0 8px 36px;
+    padding: 8px 20px 8px 36px;
     border: 1px solid $border-color;
     border-radius: 2px;
 
