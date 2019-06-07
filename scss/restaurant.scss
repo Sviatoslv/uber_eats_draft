@@ -62,7 +62,11 @@
     background-size: cover;
   }
 
-  
+  &__title-link {
+    text-decoration: none;
+    color: #1d1d1d;
+  }
+
   &__title {
     font-size: 16px;
     line-height: 24px;

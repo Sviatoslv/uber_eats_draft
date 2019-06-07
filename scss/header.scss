@@ -57,6 +57,10 @@ $button-background-color: #262626;
       flex-grow: 2;
       margin-right: 22px;
     }
+
+    .button--header-sign-in {
+      margin-right: 8px;
+    }
   }
 
   @media (max-width: 767px) {
@@ -64,8 +68,8 @@ $button-background-color: #262626;
       margin-right: 10px;
     }
 
-    &__address {
-      margin-right: 10px;
+    &__delivery {
+      margin-right: 20px;
       font-size: 13px;
     }
 
@@ -77,13 +81,7 @@ $button-background-color: #262626;
     }
 
     .button--header-sign-in {
-      margin-right: 8px;
-    }
-  }
-
-  @media (max-width: 639px) {
-    &__address {
-      display: none;
+      margin-right: 6px;
     }
   }
 
