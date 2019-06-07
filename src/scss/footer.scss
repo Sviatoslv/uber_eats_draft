@@ -33,6 +33,7 @@ $footer-background-color: #262626;
   }
   
   &__site-language {
+    display: none;
     margin-bottom: 33px;
   }
   
@@ -41,13 +42,16 @@ $footer-background-color: #262626;
     margin-bottom: 23px;
   }
   
-  &__site-language select {
+  &__site-language-select {
+    box-sizing: border-box;
     width: 227px;
     height: 40px;
     padding-left: 48px;
     border: none;
     cursor: pointer;
     
+    font: inherit;
+    font-size: 13px;
     color: #fff;
     background-color: #3b3b3b;
     text-transform: uppercase;
@@ -58,8 +62,63 @@ $footer-background-color: #262626;
     background-position: 12px center;
   }
 
-  &__site-language-link {
-    padding: 20px 0 20px 30px;
+  &__language-dropdown {
+    width: 227px;
+    position: relative;
+    margin-bottom: 33px;
+  }
+
+  &__site-language-select::after {
+    content: '';
+    position: absolute;
+    right: 6px;
+    top: 12px;
+    width: 15px;
+    height: 15px;
+    
+    background-image: url(./images/arrow_down.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__language-dropdown a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  &__language-dropdown a:hover p {
+    background-color: #333333;
+  }
+
+  &__language-dropdown p {
+    margin: 0;
+    padding: 0;
+
+    margin: 0;
+    padding: 0;
+    padding-left: 48px;
+
+    font-size: 13px;
+    line-height: 40px;
+    color: #fff;
+    background-color: #3b3b3b;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 40px;
+
+    background-image: url(./images/world.svg);
+    background-repeat: no-repeat;
+    background-position: 12px center;
+  }
+
+  &__language-dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+  }
+
+  &__language-dropdown:hover &__language-dropdown-content {
+    display: block;
   }
   
   &__tag {
@@ -236,8 +295,17 @@ $footer-background-color: #262626;
       grid-column-gap: 30px;
     }
 
+    &__site-language {
+      display: block;
+      margin-bottom: 33px;
+    }
+
     &__site-language select {
       width: 100%;
+    }
+
+    &__language-dropdown {
+      display: none
     }
 
     &__to-top {

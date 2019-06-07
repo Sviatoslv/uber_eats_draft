@@ -30,7 +30,8 @@
           >
             <option value="">ASAP</option>
             <option value="">Your time</option>
-          </select>
+        </select>
+        
         <div class="delivery__time-dropdown">
           <button class="delivery__time-dropdown-button">ASAP</button>
           
@@ -61,6 +62,7 @@
         <a href="#" class="button button--header-sign-in">Sign In</a>
         <a href="#" class="button button--header-register">Register</a>
       </div>
+
       <a href="#" class="header__cart">
         <img src="images/basket.svg" alt="Корзина">
       </a>
@@ -85,6 +87,7 @@
           <label for="devlivery-time-id" class="devlivery__time-label">
             When
           </label>
+
           <select
             id="delivery-time-id"
             name="delivery-time"
@@ -93,23 +96,22 @@
             <option value="">ASAP</option>
             <option value="">WSAP</option>
           </select>
+
           <div class="delivery__time-dropdown">
             <button class="delivery__time-dropdown-button">ASAP</button>
-            
+
             <div class="delivery__time-dropdown-content">
               <a href="#">
                 <p>ASAP</p>
               </a>
+
               <a href="#">
                 <p>Your Time</p>
               </a>
             </div>
           </div>
   
-          <label
-            for="delivery-address-id"
-            class="delivery__address-label"
-          >
+          <label for="delivery-address-id" class="delivery__address-label">
             To
           </label>
   
@@ -131,6 +133,7 @@
           <a href="#">
             <div class="restaurant__preview restaurant__preview--mack"></div>
           </a>
+
           <a href="#" class="restaurant__title-link">
             <h2 class="restaurant__title">Макдоналдс</h2>
           </a>
@@ -147,6 +150,7 @@
           <a href="#">
             <div class="restaurant__preview restaurant__preview--wokwei"></div>
           </a>
+
           <a href="#" class="restaurant__title-link">
             <h2 class="restaurant__title">WOKWEI</h2>
           </a>
@@ -164,6 +168,7 @@
           <a href="#">
             <div class="restaurant__preview restaurant__preview--yizha"></div>
           </a>
+
           <a href="#" class="restaurant__title-link">
             <h2 class="restaurant__title">YIZHA</h2>
           </a>
@@ -182,6 +187,7 @@
           <a href="#">
             <div class="restaurant__preview restaurant__preview--musafir"></div>
           </a>
+
           <a href="#" class="restaurant__title-link">
             <h2 class="restaurant__title">Musafir (вул. Саксаганського)</h2>
           </a>
@@ -198,6 +204,7 @@
           <a href="#">
             <div class="restaurant__preview restaurant__preview--wok"></div>
           </a>
+
           <a href="#" class="restaurant__title-link">
             <h2 class="restaurant__title">WOKWEI</h2>
           </a>
@@ -215,6 +222,7 @@
           <a href="#">
             <div class="restaurant__preview restaurant__preview--milk-bar"></div>
           </a>
+
           <a href="#" class="restaurant__title-link">
             <h2 class="restaurant__title">Milk Bar</h2>
           </a>
@@ -232,6 +240,7 @@
           <a href="#">
             <div class="restaurant__preview restaurant__preview--pizza"></div>
           </a>
+
           <a href="#" class="restaurant__title-link">
             <h2 class="restaurant__title">Mimosa Brooklyn Pizza</h2>
           </a>
@@ -250,6 +259,7 @@
           <a href="#">
             <div class="restaurant__preview restaurant__preview--tobe"></div>
           </a>
+
           <a href="#" class="restaurant__title-link">
             <h2 class="restaurant__title">To Be</h2>
           </a>
@@ -268,6 +278,7 @@
           <a href="#">
             <div class="restaurant__preview restaurant__preview--druzi"></div>
           </a>
+
           <a href="#" class="restaurant__title-link">
             <h2 class="restaurant__title">Druzi Cafe (вул. Прорізна)</h2>
           </a>
@@ -299,23 +310,44 @@
               name="site-language"
               id="site-language__select"
               aria-label="site language"
+              class="footer__site-language-select"
             >
-              <option value="eng">
-                <a href="#" class="footer__site-language-link">English</a>
+              <option value="eng" selected>
+                <a href="#">English</a>
               </option>
 
               <option value="ukr">
-                <a href="#" class="footer__site-language-link">Ukranian</a>
+                <a href="#">Ukranian</a>
               </option>
 
               <option value="ru">
-                <a href="#" class="footer__site-language-link">Rusian</a>
+                <a href="#">Russian</a>
               </option>
             </select>
           </form>
 
+          <div class="footer__language-dropdown">
+            <a href="#">
+              <p class="footer__site-language-select">English</p>
+            </a>
+
+            <div class="footer__language-dropdown-content">
+              <a href="#">
+                <p>Ukranian</p>
+              </a>
+
+              <a href="#">
+                <p>Russian</p>
+              </a>
+            </div>
+          </div>
+
           <div class="footer__social">
-            <p class="footer__tag"><span class="footer__hash-tag">#</span>UberEats</p>
+            <p class="footer__tag">
+              <span class="footer__hash-tag">#</span>
+              UberEats
+            </p>
+
             <ul class="footer__social-list">
               <li>
                 <a href="#" class="footer__social-link footer__social-link--facebook">

@@ -156,14 +156,18 @@ body {
   height: 40px;
   padding: 3px;
   margin-right: 9px;
+  background-color: #fff;
   font: inherit;
   font-size: 14px;
-  background-color: #fff;
   line-height: 24px;
   text-transform: uppercase;
   border: 1px solid #e0e0e0;
   border-radius: 2px;
   cursor: pointer;
+  transition: border-color 0.7s;
+}
+.delivery__time-dropdown-button:hover {
+  border-color: #1d1d1d;
 }
 .delivery__time-select {
   display: none;
@@ -206,6 +210,10 @@ body {
   border-radius: 2px;
   font: inherit;
   background: url(images/location.svg) 12px center no-repeat;
+  transition: border-color 0.7s;
+}
+.delivery__address:hover {
+  border-color: #1d1d1d;
 }
 .delivery__address::placeholder {
   color: #1d1d1d;
@@ -528,17 +536,21 @@ body {
   border-bottom: 1px solid #979797;
 }
 .footer__site-language {
+  display: none;
   margin-bottom: 33px;
 }
 .footer__social, .footer__navigation {
   margin-bottom: 23px;
 }
-.footer__site-language select {
+.footer__site-language-select {
+  box-sizing: border-box;
   width: 227px;
   height: 40px;
   padding-left: 48px;
   border: none;
   cursor: pointer;
+  font: inherit;
+  font-size: 13px;
   color: #fff;
   background-color: #3b3b3b;
   text-transform: uppercase;
@@ -547,8 +559,53 @@ body {
   background-repeat: no-repeat;
   background-position: 12px center;
 }
-.footer__site-language-link {
-  padding: 20px 0 20px 30px;
+.footer__language-dropdown {
+  width: 227px;
+  position: relative;
+  margin-bottom: 33px;
+}
+.footer__site-language-select::after {
+  content: "";
+  position: absolute;
+  right: 6px;
+  top: 12px;
+  width: 15px;
+  height: 15px;
+  background-image: url(./images/arrow_down.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.footer__language-dropdown a {
+  text-decoration: none;
+  color: #fff;
+}
+.footer__language-dropdown a:hover p {
+  background-color: #333333;
+}
+.footer__language-dropdown p {
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  padding: 0;
+  padding-left: 48px;
+  font-size: 13px;
+  line-height: 40px;
+  color: #fff;
+  background-color: #3b3b3b;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 40px;
+  background-image: url(./images/world.svg);
+  background-repeat: no-repeat;
+  background-position: 12px center;
+}
+.footer__language-dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+}
+.footer__language-dropdown:hover .footer__language-dropdown-content {
+  display: block;
 }
 .footer__tag {
   margin: 0;
@@ -692,8 +749,15 @@ body {
     display: grid;
     grid-column-gap: 30px;
   }
+  .footer__site-language {
+    display: block;
+    margin-bottom: 33px;
+  }
   .footer__site-language select {
     width: 100%;
+  }
+  .footer__language-dropdown {
+    display: none;
   }
   .footer__to-top {
     display: block;
